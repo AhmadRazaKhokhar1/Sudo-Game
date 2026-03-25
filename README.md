@@ -15,9 +15,9 @@ make test
 
 ## Current UI Scaffold
 
-- `src/index.html` includes a modern, responsive navbar with semantic markup.
-- `src/styles.css` contains navbar styling and responsive behavior.
-- `tests/navbar_test.sh` validates the navbar structure and key responsive CSS hooks.
+- `src/index.html` includes a modern, responsive navbar with semantic markup and an accessible mobile menu toggle.
+- `src/styles.css` contains navbar styling, mobile open/closed states, and responsive behavior.
+- `tests/navbar_test.sh` validates navbar structure, accessibility hooks, and key responsive CSS selectors.
 
 ## Repository Docs
 

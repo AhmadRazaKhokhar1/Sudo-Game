@@ -19,13 +19,28 @@ grep -Eq '<nav class="navbar" aria-label="Primary">' "$html_file" || {
   exit 1
 }
 
-grep -Eq '<ul class="nav-links">' "$html_file" || {
+grep -Eq '<ul class="nav-links" id="primary-nav-links">' "$html_file" || {
   echo "Expected nav links list in $html_file" >&2
   exit 1
 }
 
 grep -Eq 'class="cta"' "$html_file" || {
   echo "Expected call-to-action link in $html_file" >&2
+  exit 1
+}
+
+grep -Eq 'class="menu-toggle"' "$html_file" || {
+  echo "Expected responsive menu toggle button in $html_file" >&2
+  exit 1
+}
+
+grep -Eq 'aria-controls="primary-nav-links"' "$html_file" || {
+  echo "Expected toggle button to control the primary nav links list" >&2
+  exit 1
+}
+
+grep -Eq 'id="primary-nav-links"' "$html_file" || {
+  echo "Expected nav links list id for accessible menu toggle behavior" >&2
   exit 1
 }
 
@@ -36,6 +51,11 @@ grep -Eq '^\.navbar \{' "$css_file" || {
 
 grep -Eq '@media \(max-width: 768px\)' "$css_file" || {
   echo "Expected responsive navbar media query in $css_file" >&2
+  exit 1
+}
+
+grep -Eq '\.navbar\.is-open \.nav-links \{' "$css_file" || {
+  echo "Expected mobile open-state nav link styles in $css_file" >&2
   exit 1
 }
 

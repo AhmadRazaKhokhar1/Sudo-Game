@@ -25,7 +25,7 @@ Repository-specific commands and automation guidance.
   - Verifies navbar source files and navbar test script are present.
 - `make test`
   - Executes base integrity checks from `scripts/validate_repo.sh`.
-  - Runs `tests/navbar_test.sh` to validate semantic navbar markup and responsive CSS hooks.
+  - Runs `tests/navbar_test.sh` to validate semantic navbar markup, mobile toggle accessibility attributes, and responsive CSS hooks.
 
 ## Layout
 

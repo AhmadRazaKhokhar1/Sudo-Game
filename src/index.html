@@ -11,11 +11,17 @@
       <nav class="navbar" aria-label="Primary">
         <a class="brand" href="#" aria-label="Sudo-Game home">Sudo-Game</a>
 
-        <button class="menu-toggle" type="button" aria-label="Open navigation menu">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav-links"
+          aria-label="Toggle navigation menu"
+        >
           Menu
         </button>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-nav-links">
           <li><a href="#play">Play</a></li>
           <li><a href="#leaderboard">Leaderboard</a></li>
           <li><a href="#about">About</a></li>
@@ -29,5 +35,17 @@
       <h1>Welcome to Sudo-Game</h1>
       <p>The main game UI will be introduced in a future issue.</p>
     </main>
+
+    <script>
+      const menuButton = document.querySelector(".menu-toggle");
+      const navBar = document.querySelector(".navbar");
+
+      if (menuButton && navBar) {
+        menuButton.addEventListener("click", () => {
+          const isOpen = navBar.classList.toggle("is-open");
+          menuButton.setAttribute("aria-expanded", String(isOpen));
+        });
+      }
+    </script>
   </body>
 </html>

@@ -118,14 +118,23 @@ h1 {
   }
 
   .nav-links {
+    display: none;
     width: 100%;
     order: 3;
     margin-left: 0;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 0.3rem;
+  }
+
+  .navbar.is-open .nav-links {
+    display: flex;
   }
 
   .cta {
     order: 2;
+    margin-left: auto;
   }
 }
 

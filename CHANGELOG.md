@@ -10,3 +10,4 @@ All notable changes to this project will be documented in this file.
 - Initial `src/` and `tests/` scaffolding for future development.
 - Modern responsive navbar scaffold in `src/index.html` and `src/styles.css` (TEST1-5).
 - Navbar validation script `tests/navbar_test.sh` integrated into `make test`.
+- Added accessible mobile menu toggle behavior and corresponding navbar test coverage (TEST1-5).
