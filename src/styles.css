@@ -1,0 +1,135 @@
+:root {
+  --color-bg: #f3f6fb;
+  --color-panel: #ffffff;
+  --color-text: #1c2430;
+  --color-muted: #5f6b7a;
+  --color-accent: #0d9488;
+  --color-accent-strong: #0f766e;
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --radius-pill: 999px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--color-text);
+  background:
+    radial-gradient(circle at top right, rgba(13, 148, 136, 0.1), transparent 45%),
+    linear-gradient(160deg, #f7fafc, var(--color-bg));
+  min-height: 100vh;
+}
+
+.site-header {
+  padding: 1rem;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-panel);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  color: var(--color-text);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: var(--color-muted);
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.7rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--color-text);
+  background-color: rgba(13, 148, 136, 0.1);
+}
+
+.cta {
+  text-decoration: none;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.2s ease;
+}
+
+.cta:hover,
+.cta:focus-visible {
+  background-color: var(--color-accent-strong);
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid rgba(28, 36, 48, 0.2);
+  background: #ffffff;
+  border-radius: 0.7rem;
+  color: var(--color-text);
+  padding: 0.45rem 0.75rem;
+  font-weight: 600;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    border-radius: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    width: 100%;
+    order: 3;
+    margin-left: 0;
+    justify-content: space-between;
+  }
+
+  .cta {
+    order: 2;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}

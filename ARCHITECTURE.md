@@ -2,32 +2,33 @@
 
 ## Current State
 
-The repository is currently a base scaffold prepared for upcoming Sudo-Game implementation work.
+The repository now includes an initial static frontend scaffold with a modern navigation bar and repository-level validation checks.
 
 ## Top-Level Boundaries
 
 - Root markdown files: project and workflow documentation.
 - `scripts/`: repository validation and maintenance scripts.
-- `src/`: application code boundary (currently scaffolded).
-- `tests/`: test suite boundary (currently scaffolded).
+- `src/`: frontend source boundary containing static HTML/CSS assets.
+- `tests/`: shell-based repository and feature checks.
 
 ## Data Flow
 
-No runtime data flow exists yet because product code has not been implemented. Current flow is developer-centric:
+Current flow is developer-centric:
 
-1. Contributor updates code/docs.
-2. `make lint` validates documentation and required files.
-3. `make test` runs baseline repository integrity checks.
+1. Contributor updates code/docs in `src/`, `tests/`, and root docs.
+2. `make lint` validates required docs and frontend asset presence.
+3. `make test` runs baseline repository integrity checks plus navbar-specific assertions.
 
 ## Dependencies
 
 - GNU Make
 - POSIX shell (`bash`)
 - Git
+- Static HTML/CSS (no framework/runtime dependency yet)
 
 No external runtime services are required at this stage.
 
 ## Configuration
 
-- Local environment configuration is expected via `.env` files when application code is introduced.
+- Local environment configuration is expected via `.env` files when dynamic application code is introduced.
 - `.env*` files are excluded from version control by `.gitignore`.
