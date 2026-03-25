@@ -1,0 +1,23 @@
+# Orchestration artifacts
+.orch-symphony/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and local env
+*.log
+.env
+.env.*
+
+# Node / JS
+node_modules/
+dist/
+coverage/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
