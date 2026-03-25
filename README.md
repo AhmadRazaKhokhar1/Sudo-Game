@@ -4,7 +4,7 @@ Base repository setup for **TEST1-2**.
 
 ## Purpose
 
-This repository is initialized with core project documentation, contribution guidance, and lightweight quality checks so feature work can start from a consistent baseline.
+This repository is initialized with core project documentation, base source/test folders, and lightweight quality checks so feature work can start from a consistent baseline.
 
 ## Quick Start
 

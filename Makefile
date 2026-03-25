@@ -5,6 +5,7 @@ lint:
 	@test -s ARCHITECTURE.md
 	@test -s SKILLS.md
 	@test -s CONTRIBUTING.md
+	@test -s CHANGELOG.md
 	@grep -Eq '^\.orch-symphony/' .gitignore
 	@echo "Lint checks passed."
 

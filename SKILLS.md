@@ -24,6 +24,7 @@ Repository-specific commands and automation guidance.
   - Ensures orchestration artifacts path is ignored in `.gitignore`.
 - `make test`
   - Executes base integrity checks from `scripts/validate_repo.sh`.
+  - Verifies baseline structure includes `src/` and `tests/`.
 
 ## Layout
 
@@ -31,8 +32,11 @@ Repository-specific commands and automation guidance.
 - `ARCHITECTURE.md` - architecture and boundaries
 - `SKILLS.md` - automation and command reference
 - `CONTRIBUTING.md` - contribution workflow
+- `CHANGELOG.md` - change history
 - `Makefile` - primary local command entrypoints
 - `scripts/` - local validation scripts
+- `src/` - application source scaffold
+- `tests/` - test scaffold
 
 ## Automation Safety
 

@@ -2,15 +2,14 @@
 
 ## Current State
 
-The repository is currently a base scaffold with documentation and automation entry points, prepared for upcoming Sudo-Game implementation work.
+The repository is currently a base scaffold prepared for upcoming Sudo-Game implementation work.
 
 ## Top-Level Boundaries
 
-- `docs` (implicit via markdown at root): project and workflow documentation.
+- Root markdown files: project and workflow documentation.
 - `scripts/`: repository validation and maintenance scripts.
-- Future code boundaries (planned):
-  - `src/` for application code.
-  - `tests/` for unit/integration tests.
+- `src/`: application code boundary (currently scaffolded).
+- `tests/`: test suite boundary (currently scaffolded).
 
 ## Data Flow
 

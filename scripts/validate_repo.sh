@@ -6,6 +6,7 @@ required_files=(
   "ARCHITECTURE.md"
   "SKILLS.md"
   "CONTRIBUTING.md"
+  "CHANGELOG.md"
   "Makefile"
   ".gitignore"
 )
@@ -13,6 +14,19 @@ required_files=(
 for file in "${required_files[@]}"; do
   if [[ ! -s "$file" ]]; then
     echo "Missing or empty required file: $file" >&2
+    exit 1
+  fi
+done
+
+required_dirs=(
+  "scripts"
+  "src"
+  "tests"
+)
+
+for dir in "${required_dirs[@]}"; do
+  if [[ ! -d "$dir" ]]; then
+    echo "Missing required directory: $dir" >&2
     exit 1
   fi
 done
