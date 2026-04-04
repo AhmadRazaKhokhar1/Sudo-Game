@@ -4,7 +4,6 @@
 # OS / editor
 .DS_Store
 Thumbs.db
-.vscode/
 .idea/
 
 # Logs and local env
@@ -21,3 +20,6 @@ coverage/
 __pycache__/
 *.pyc
 .venv/
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
