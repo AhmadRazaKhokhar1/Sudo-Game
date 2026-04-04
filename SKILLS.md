@@ -22,9 +22,10 @@ Repository-specific commands and automation guidance.
 - `make lint`
   - Verifies required repository docs exist.
   - Ensures orchestration artifacts path is ignored in `.gitignore`.
+  - Verifies navbar source files and navbar test script are present.
 - `make test`
   - Executes base integrity checks from `scripts/validate_repo.sh`.
-  - Verifies baseline structure includes `src/` and `tests/`.
+  - Runs `tests/navbar_test.sh` to validate semantic navbar markup, mobile toggle accessibility attributes, and responsive CSS hooks.
 
 ## Layout
 
@@ -35,8 +36,8 @@ Repository-specific commands and automation guidance.
 - `CHANGELOG.md` - change history
 - `Makefile` - primary local command entrypoints
 - `scripts/` - local validation scripts
-- `src/` - application source scaffold
-- `tests/` - test scaffold
+- `src/` - static frontend source (`index.html`, `styles.css`)
+- `tests/` - shell checks for repository integrity and feature validation
 
 ## Automation Safety
 

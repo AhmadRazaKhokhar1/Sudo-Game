@@ -1,10 +1,10 @@
 # Sudo-Game
 
-Base repository setup for **TEST1-2**.
+Repository setup for iterative Sudo-Game development tasks.
 
 ## Purpose
 
-This repository is initialized with core project documentation, base source/test folders, and lightweight quality checks so feature work can start from a consistent baseline.
+This repository contains core project documentation, a starter frontend scaffold, and lightweight quality checks so feature work can evolve safely.
 
 ## Quick Start
 
@@ -12,6 +12,12 @@ This repository is initialized with core project documentation, base source/test
 make lint
 make test
 ```
+
+## Current UI Scaffold
+
+- `src/index.html` includes a modern, responsive navbar with semantic markup and an accessible mobile menu toggle.
+- `src/styles.css` contains navbar styling, mobile open/closed states, and responsive behavior.
+- `tests/navbar_test.sh` validates navbar structure, accessibility hooks, and key responsive CSS selectors.
 
 ## Repository Docs
 
